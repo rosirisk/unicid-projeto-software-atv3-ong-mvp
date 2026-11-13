@@ -5,14 +5,14 @@ public class FamiliaTest {
 
         System.out.println("=== INICIANDO TESTES AUTOMATIZADOS (UNITÁRIOS E INTEGRAÇÃO) ===");
 
-        // Validação da classe Familia com os dados do MVP
+        // Validação da classe Familia
         Familia familia = new Familia(1, "Maria Silva", "(11) 98888-7777", 4);
 
         assert familia.getId() == 1;
         assert familia.getNomeResponsavel().equals("Maria Silva");
         assert familia.getQuantidadeIntegrantes() == 4;
 
-        // Validação dos Formatadores de Documentos reais
+        // Validação do Formatador de Documentos
         String cpfTeste = FormatadorDocumentos.formatarCPF("12345678901");
         assert cpfTeste.equals("123.456.789-01");
 
